@@ -165,6 +165,15 @@ jobs:
           # CONFIG_PACKAGE_luci-app-webadmin=y
           # CONFIG_PACKAGE_luci-app-wireguard=y
           # CONFIG_PACKAGE_luci-app-wrtbwmon=y
+          CONFIG_PACKAGE_luci-app-autoreboot
+          CONFIG_PACKAGE_luci-app-filetransfer
+          CONFIG_PACKAGE_luci-app-firewall
+          CONFIG_PACKAGE_luci-app-ntpc
+          CONFIG_PACKAGE_luci-app-ramfree
+          CONFIG_PACKAGE_luci-app-samba
+          CONFIG_PACKAGE_luci-app-shairplay
+          CONFIG_PACKAGE_luci-app-vlmcsd
+          CONFIG_PACKAGE_luci-app-vsftpd
           EOF
 
           # LuCI主题:
