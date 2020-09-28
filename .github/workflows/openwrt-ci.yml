@@ -61,8 +61,8 @@ jobs:
           cd package
           mkdir openwrt-packages
           cd openwrt-packages
-          git clone git@github.com:project-openwrt/luci-app-koolproxyR.git
-          git clone git@github.com:pymumu/luci-app-smartdns.git
+          git clone https://github.com/project-openwrt/luci-app-koolproxyR
+          git clone https://github.com/pymumu/luci-app-smartdns
           
       - name: Update feeds
         run: |
