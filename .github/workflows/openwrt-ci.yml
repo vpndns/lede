@@ -55,7 +55,15 @@ jobs:
           sudo -E apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler
           sudo -E apt-get -y autoremove --purge
           sudo -E apt-get clean
-
+          
+     - name: 自定义插件主题。
+        run: |
+          cd package
+          mkdir openwrt-packages
+          cd openwrt-packages
+          git clone git@github.com:project-openwrt/luci-app-koolproxyR.git
+          git clone git@github.com:pymumu/luci-app-smartdns.git
+          
       - name: Update feeds
         run: |
           ./scripts/feeds update -a
@@ -165,15 +173,16 @@ jobs:
           # CONFIG_PACKAGE_luci-app-webadmin=y
           # CONFIG_PACKAGE_luci-app-wireguard=y
           # CONFIG_PACKAGE_luci-app-wrtbwmon=y
-          CONFIG_PACKAGE_luci-app-autoreboot
-          CONFIG_PACKAGE_luci-app-filetransfer
-          CONFIG_PACKAGE_luci-app-firewall
-          CONFIG_PACKAGE_luci-app-ntpc
-          CONFIG_PACKAGE_luci-app-ramfree
-          CONFIG_PACKAGE_luci-app-samba
-          CONFIG_PACKAGE_luci-app-shairplay
-          CONFIG_PACKAGE_luci-app-vlmcsd
-          CONFIG_PACKAGE_luci-app-vsftpd
+          CONFIG_PACKAGE_luci-app-autoreboot=y
+          CONFIG_PACKAGE_luci-app-filetransfer=y
+          CONFIG_PACKAGE_luci-app-firewall=y
+          CONFIG_PACKAGE_luci-app-ntpc=y
+          CONFIG_PACKAGE_luci-app-ramfree=y
+          CONFIG_PACKAGE_luci-app-samba=y
+          CONFIG_PACKAGE_luci-app-vlmcsd=y
+          CONFIG_PACKAGE_luci-app-vsftpd=y
+          CONFIG_PACKAGE_luci-app-koolproxyR=y
+          CONFIG_PACKAGE_luci-app-smartdns=y
           EOF
 
           # LuCI主题:
