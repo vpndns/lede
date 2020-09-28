@@ -175,12 +175,9 @@ jobs:
           # CONFIG_PACKAGE_luci-app-wrtbwmon=y
           CONFIG_PACKAGE_luci-app-autoreboot=y
           CONFIG_PACKAGE_luci-app-filetransfer=y
-          CONFIG_PACKAGE_luci-app-firewall=y
           CONFIG_PACKAGE_luci-app-ntpc=y
           CONFIG_PACKAGE_luci-app-ramfree=y
-          CONFIG_PACKAGE_luci-app-samba=y
-          CONFIG_PACKAGE_luci-app-vlmcsd=y
-          CONFIG_PACKAGE_luci-app-vsftpd=y
+          CONFIG_PACKAGE_luci-app-vlm=y
           CONFIG_PACKAGE_luci-app-koolproxyR=y
           CONFIG_PACKAGE_luci-app-smartdns=y
           EOF
