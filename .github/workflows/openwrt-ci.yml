@@ -63,7 +63,8 @@ jobs:
           cd openwrt-packages
           git clone https://github.com/pymumu/luci-app-smartdns
           git clone https://github.com/project-openwrt/luci-app-koolproxyR
-
+          git clone https://github.com/vpndns/luci-app-ssr-plus.git
+          
       - name: Update feeds
         run: |
           ./scripts/feeds update -a
@@ -177,6 +178,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-filetransfer=y
           CONFIG_PACKAGE_luci-app-koolproxyR=y
           CONFIG_PACKAGE_luci-app-smartdns=y
+          CONFIG_PACKAGE_luci-app-ssr-plus=y
           EOF
 
           # LuCI主题:
