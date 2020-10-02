@@ -173,7 +173,6 @@ jobs:
           # CONFIG_PACKAGE_luci-app-wireguard=y
           # CONFIG_PACKAGE_luci-app-wrtbwmon=y
           CONFIG_PACKAGE_luci-app-koolproxyR=y
-          CONFIG_PACKAGE_luci-app-shairplay=y
           EOF
 
           # LuCI主题:
