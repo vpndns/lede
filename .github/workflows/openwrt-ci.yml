@@ -106,7 +106,7 @@ jobs:
           # 无论你想要对固件进行怎样的定制, 都需要且只需要修改 EOF 回环内的内容.
           # 
 
-          # 编译x64固件:
+          # 编译ar71xx固件:
           cat >> .config <<EOF
           CONFIG_TARGET_ar71xx=y
           CONFIG_TARGET_ar71xx_nand=y
@@ -140,12 +140,12 @@ jobs:
           EOF
 
           # USB3.0支持:
-          cat >> .config <<EOF
-          CONFIG_PACKAGE_kmod-usb-ohci=y
-          CONFIG_PACKAGE_kmod-usb-ohci-pci=y
-          CONFIG_PACKAGE_kmod-usb2=y
-          CONFIG_PACKAGE_kmod-usb2-pci=y
-          CONFIG_PACKAGE_kmod-usb3=y
+          # cat >> .config <<EOF
+          # CONFIG_PACKAGE_kmod-usb-ohci=y
+          # CONFIG_PACKAGE_kmod-usb-ohci-pci=y
+          # CONFIG_PACKAGE_kmod-usb2=y
+          # CONFIG_PACKAGE_kmod-usb2-pci=y
+          # CONFIG_PACKAGE_kmod-usb3=y
           EOF
 
           # 常用LuCI插件选择:
