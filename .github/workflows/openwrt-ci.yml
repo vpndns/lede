@@ -56,6 +56,16 @@ jobs:
           sudo -E apt-get -y autoremove --purge
           sudo -E apt-get clean
 
+      - name: 自定义插件主题。57-66行中添加
+        run: |
+          cd package
+          mkdir openwrt-packages
+          cd openwrt-packages
+          git clone https://github.com/project-openwrt/luci-app-koolproxyR
+          git clone https://github.com/lisaac/luci-app-dockerman
+          git clone https://github.com/jerrykuku/luci-app-ttnode
+          git clone https://github.com/destan19/OpenAppFilter
+
       - name: Update feeds
         run: |
           ./scripts/feeds update -a
