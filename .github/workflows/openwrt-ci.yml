@@ -62,8 +62,6 @@ jobs:
           mkdir openwrt-packages
           cd openwrt-packages
           git clone https://github.com/project-openwrt/luci-app-koolproxyR
-          git clone https://github.com/lisaac/luci-app-dockerman
-          git clone https://github.com/jerrykuku/luci-app-ttnode
           git clone https://github.com/destan19/OpenAppFilter
 
       - name: Update feeds
@@ -182,10 +180,10 @@ jobs:
           # EOF
 
           # LuCI主题:
-          cat >> .config <<EOF
-          CONFIG_PACKAGE_luci-theme-argon=y
-          CONFIG_PACKAGE_luci-theme-netgear=y
-          EOF
+          # cat >> .config <<EOF
+          # CONFIG_PACKAGE_luci-theme-argon=y
+          # CONFIG_PACKAGE_luci-theme-netgear=y
+          # EOF
 
           # 常用软件包:
           # cat >> .config <<EOF
@@ -199,10 +197,10 @@ jobs:
           # EOF
 
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
-          # cat >> .config <<EOF
-          # # CONFIG_TARGET_IMAGES_PAD is not set
-          # # CONFIG_VMDK_IMAGES is not set
-          # EOF
+          cat >> .config <<EOF
+          # CONFIG_TARGET_IMAGES_PAD is not set
+          # CONFIG_VMDK_IMAGES is not set
+          EOF
 
           # 
           # ========================固件定制部分结束========================
